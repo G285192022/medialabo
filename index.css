@@ -1,0 +1,21 @@
+
+h1{
+    background-color: greenyellow;
+}
+
+ul{
+    border: solid;
+    background-color: aqua;
+}
+
+    a:link {
+        color: red;
+     }
+      
+      a:visited {
+        color: purple;
+      }
+      
+      a:hover {
+        text-decoration: none;
+    }
