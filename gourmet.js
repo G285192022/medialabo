@@ -200,5 +200,7 @@ let data = {
 };
 
 /////////// 課題3-2 ここからプログラムを書こう
+console.log(data.results.shop[0].access);//店舗１の行き方
+console.log(data.results.shop[1].address);//店舗の住所
 console.log();
 
