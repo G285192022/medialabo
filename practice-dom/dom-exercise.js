@@ -14,7 +14,9 @@ let data = [
 //// 注意: 以上は編集しないこと!
 
 // 練習4-2 メッセージ追加プログラム
-
+let a1 = document.querySelector('h2#ex42'); 
+let p1 = document.createElement('p'); 
+p1.textContent= "写真表と緯度経度のページです" ;
 
 // 練習4-3 写真表作成プログラム
 
