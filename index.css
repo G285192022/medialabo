@@ -1,11 +1,20 @@
+body{
+    background-color: #CCFFFF;
+}
 
 h1{
     background-color: greenyellow;
 }
-
-ul{
+p{
+    font-weight: bold;
     border: solid;
-    background-color: aqua;
+    border-color: purple;
+    background-color: white;
+}
+
+a{
+    font-weight: bold;    
+    background-color: white;
 }
 
     a:link {
