@@ -1,0 +1,21 @@
+
+body{
+    background-color: bisque;
+    font-weight: bold;
+}
+
+table{
+    border: 3px black solid;
+    border-collapse: collapse;
+}
+th,td{
+    border: 1px black solid;
+}
+
+th{
+   background-color: yellow;
+}
+
+td{
+    background-color: white;
+}
