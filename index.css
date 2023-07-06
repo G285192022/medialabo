@@ -13,11 +13,13 @@ body{
 h1{
     background-color: greenyellow;
 }
-p,ul.waku{
+p{
     font-weight: bold;
     border: solid;
     border-color: purple;
     background-color: white;
+    width: 1300px;
+    word-wrap: break-word;
 }
 
 
