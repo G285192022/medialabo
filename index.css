@@ -1,3 +1,11 @@
+h1{
+	text-shadow: white 1px 0 10px;
+}
+
+h3{
+	text-shadow: yellowgreen 1px 0 10px;
+}
+
 body{
     background-color: #CCFFFF;
 }
@@ -5,12 +13,13 @@ body{
 h1{
     background-color: greenyellow;
 }
-p{
+p,ul.waku{
     font-weight: bold;
     border: solid;
     border-color: purple;
     background-color: white;
 }
+
 
 a{
     font-weight: bold;    
