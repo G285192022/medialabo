@@ -202,25 +202,34 @@ let data = {
 /////////// 課題3-2 ここからプログラムを書こう
 // console.log(data.results.shop[0].access);//店舗１の行き方
 // console.log(data.results.shop[1].address);//店舗の住所
+//↑resultsから始まってるからresultsを引っこ抜く感じ
 // console.log();
 
-
-function kensaku(event) {
-
-}
-
-
 let b1 = document.querySelector('button#print');
-b1.addEventListener('click', );
-
-let b = document.querySelector('#sendRequest');
-b.addEventListener('click', sendRequest);
+b1.addEventListener('click', sendRequest);
 
 
+let C;
 // 通信を開始する処理
 function sendRequest() {
+  let A = document.querySelector('select#kouho');
+  let B = A.selectedIndex;
+  // let C = B + 1;ここで定義するとshowで使えない
+  C = B + 1;
+
+  console.log(C); //確認用
     // URL を設定
-    let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/{genre}.json';
+    let url;
+    if(C < 10){
+      console.log(C);//確認用
+      url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G00'+ C +'.json';
+      console.log(url);//確認用
+    }else{
+      console.log(C);//確認用
+      url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G0'+ C +'.json';
+      console.log(url);//確認用
+    }
+    
 
     // 通信開始
     axios.get(url)
@@ -233,10 +242,38 @@ function sendRequest() {
 function showResult(resp) {
     // サーバから送られてきたデータを出力
     let data = resp.data;
+    let mori = data.results;
+    let hayashi = mori.shop;
+
 
     // data が文字列型なら，オブジェクトに変換する
     if (typeof data === 'string') {
         data = JSON.parse(data);
+    }
+
+    for(let C of hayashi){
+    let h4result = document.querySelector('div#result');
+    let presult = document.createElement('p');
+    presult.textContent = '店名  ' + C.name;
+    h4result.insertAdjacentElement('beforeend', presult);
+    console.log(presult.textContent);//確認用
+
+    presult = document.createElement('p');
+    presult.textContent = '住所  ' + C.address;
+    h4result.insertAdjacentElement('beforeend' , presult);
+    console.log(presult.textContent);//確認用
+
+    presult = document.createElement('p');
+    presult.textContent = 'アクセス  ' + C.access;
+    h4result.insertAdjacentElement('beforeend' , presult);
+    console.log(presult.textContent);//確認用
+
+    presult = document.createElement('p');
+    presult.textContent = '----------------------------------------------------------';
+    h4result.insertAdjacentElement('beforeend' , presult);
+
+    
+    
     }
 
     // data をコンソールに出力
