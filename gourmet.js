@@ -252,6 +252,7 @@ function showResult(resp) {
     // for(let C of hayashi){
     //   presult.remove();
     // }
+    //検索するたびに前の結果をリセットする方法がわからない
 
     for(let C of hayashi){
     let h4result = document.querySelector('div#result');
