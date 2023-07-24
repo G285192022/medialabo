@@ -203,7 +203,6 @@ let data = {
 // console.log(data.results.shop[0].access);//店舗１の行き方
 // console.log(data.results.shop[1].address);//店舗の住所
 //↑resultsから始まってるからresultsを引っこ抜く感じ
-// console.log();
 
 let b1 = document.querySelector('button#print');
 b1.addEventListener('click', sendRequest);
@@ -229,7 +228,6 @@ function sendRequest() {
       url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G0'+ C +'.json';
       console.log(url);//確認用
     }
-    
 
     // 通信開始
     axios.get(url)
@@ -251,29 +249,41 @@ function showResult(resp) {
         data = JSON.parse(data);
     }
 
+    // for(let C of hayashi){
+    //   presult.remove();
+    // }
+
     for(let C of hayashi){
     let h4result = document.querySelector('div#result');
     let presult = document.createElement('p');
-    presult.textContent = '店名  ' + C.name;
+    presult.textContent = '・店名→  ' + C.name;
     h4result.insertAdjacentElement('beforeend', presult);
     console.log(presult.textContent);//確認用
 
     presult = document.createElement('p');
-    presult.textContent = '住所  ' + C.address;
+    presult.textContent = '・住所→  ' + C.address;
     h4result.insertAdjacentElement('beforeend' , presult);
     console.log(presult.textContent);//確認用
 
     presult = document.createElement('p');
-    presult.textContent = 'アクセス  ' + C.access;
+    presult.textContent = '・アクセス→  ' + C.access;
     h4result.insertAdjacentElement('beforeend' , presult);
     console.log(presult.textContent);//確認用
 
     presult = document.createElement('p');
-    presult.textContent = '----------------------------------------------------------';
+    presult.textContent = '・営業時間→  ' + C.open;
     h4result.insertAdjacentElement('beforeend' , presult);
+    console.log(presult.textContent);//確認用
 
-    
-    
+    presult = document.createElement('p');
+    presult.textContent = '・定休日→  ' + C.close;
+    h4result.insertAdjacentElement('beforeend' , presult);
+    console.log(presult.textContent);//確認用
+
+    presult = document.createElement('p');
+    presult.textContent = '------------------------------------------------------------------------------------------------------------------------------------------------------------------';
+    h4result.insertAdjacentElement('beforeend' , presult);
+      
     }
 
     // data をコンソールに出力

@@ -4,9 +4,16 @@ body{
     font-weight: bold;
 }
 
-p.center {
-    text-align: center; 
+p{
+    font-weight: bold;
 }
+
+div{
+    border: 3px black solid;
+    border-collapse: collapse;
+    background-color: white;
+}
+
 
 h2{
     color: green;
