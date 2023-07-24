@@ -267,6 +267,11 @@ function showResult(resp) {
     console.log(presult.textContent);//確認用
 
     presult = document.createElement('p');
+    presult.textContent = '・最寄り駅→  ' + C.station_name;
+    h4result.insertAdjacentElement('beforeend' , presult);
+    console.log(presult.textContent);//確認用
+
+    presult = document.createElement('p');
     presult.textContent = '・アクセス→  ' + C.access;
     h4result.insertAdjacentElement('beforeend' , presult);
     console.log(presult.textContent);//確認用
