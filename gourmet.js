@@ -252,7 +252,12 @@ function showResult(resp) {
     // for(let C of hayashi){
     //   presult.remove();
     // }
-    //検索するたびに前の結果をリセットする方法がわからない
+    //検索するたびに前の結果をリセットする方法がわからない　7/23
+    let a2 = document.querySelectorAll('p'); 
+    for (let n of a2) {
+    n.remove();
+    } 
+    // dom-exercise.jsに答えがありました。7/26
 
     for(let C of hayashi){
     let h4result = document.querySelector('div#result');
